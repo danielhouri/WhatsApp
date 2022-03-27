@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './SignUp.css';
 
 function SignUp() {
@@ -35,7 +36,7 @@ function SignUp() {
                 </div>
 
                 <button className="w-100 btn btn-lg btn-primary" onClick={handleClickSignUp} type="submit">Sign up</button>
-                <button className="mt-2 w-100 btn btn-lg btn-success" type="submit">Back</button>
+                <Link className="mt-2 w-100 btn btn-lg btn-secondary" to="/" type="submit">Back</Link>
             </form>
         </main>  
     );
