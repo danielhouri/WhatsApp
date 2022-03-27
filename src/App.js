@@ -1,20 +1,18 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import SignIn from './SignIn/SignIn.js'
+import SignUn from './SignUp/SignUp.js'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<SignIn />}></Route>
+            <Route path='/signup' element={<SignUn />}></Route>
+          </Routes>
+        </BrowserRouter>
       </header>
     </div>
   );

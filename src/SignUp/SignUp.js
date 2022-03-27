@@ -1,13 +1,14 @@
 import { useRef } from 'react';
-import './SignIn.css';
-import UserList from './UserList';
+import './SignUp.css';
 
-function SignIn() {
+function SignUp() {
 
     const username = useRef(null);
     const password = useRef(null);
+    const nickname = useRef(null);
+
     
-    function handleClickSignIn() {
+    function handleClickSignUp() {
         if (!(username.current.value && username.current.value)) {
             alert(username.current.value);
         }
@@ -15,10 +16,10 @@ function SignIn() {
     }
 
     return (
-        <main className="form-signin">
+        <main className="form-signuup">
             <form>
                 <img className="mb-4" src="icon.svg" alt="" width="72" height="57"></img>
-                <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+                <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
 
                 <div className="form-floating">
                     <input ref={username} type="username" className="form-control" id="floatingInput" placeholder="Username"></input>
@@ -28,14 +29,17 @@ function SignIn() {
                     <input ref={password} type="password" className="form-control" id="floatingPassword" placeholder="Password"></input>
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
-                
+                <div className="form-floating">
+                    <input ref={nickname} type="nickname" className="form-control" id="floatingNickname" placeholder="Nickname"></input>
+                    <label htmlFor="floatingNickname">Nickname</label>
+                </div>
 
-                <button className="w-100 btn btn-lg btn-primary" onClick={handleClickSignIn} type="submit">Sign in</button>
-                <button className="mt-2 w-100 btn btn-lg btn-success" type="submit">Sign up</button>
+                <button className="w-100 btn btn-lg btn-primary" onClick={handleClickSignUp} type="submit">Sign up</button>
+                <button className="mt-2 w-100 btn btn-lg btn-success" type="submit">Back</button>
             </form>
         </main>  
     );
 }
 
 
-export default SignIn;
+export default SignUp;

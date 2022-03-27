@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import SignIn from './SignIn/SignIn';
+import Apps from './App'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <SignIn />
+    <Apps />
   </React.StrictMode>,
   document.getElementById('root')
 );
