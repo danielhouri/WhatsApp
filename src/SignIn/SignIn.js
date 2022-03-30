@@ -1,26 +1,42 @@
-import { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './SignIn.css';
 import UserList from './UserList';
+import { Button } from 'react-bootstrap';
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
+
 
 function SignIn() {
 
+    const [show, setShow] = useState(false);
+    const navigate = useNavigate();
     const username = useRef(null);
     const password = useRef(null);
-    
-    function handleClickSignIn() {
-        if (!(username.current.value && username.current.value)) {
-            alert(username.current.value);
-        }
-            
+
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+    const handleClickSignIn = () => {
+        var valid = false;
+        UserList.forEach((element) => {
+            if ((element.username === username.current.value) && element.password === password.current.value) {
+                valid = true;
+                navigate("/chat");
+            }
+        });
+
+        if (!valid) {
+            handleShow();
+        };
     }
 
     return (
         <main className="form-signin">
             <form>
-                <img className="mb-4" src="icon.svg" alt="" width="72" height="57"></img>
-                <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-
+                <img className="mb-4 noselect" src="icon.svg" alt="logo" width="70" role="img"></img>
+                <h1 className="h3 mb-3 fw-normal noselect">Please sign in</h1>
                 <div className="form-floating">
                     <input ref={username} type="username" className="form-control" id="floatingInput" placeholder="Username"></input>
                     <label htmlFor="floatingInput">Username</label>
@@ -29,12 +45,12 @@ function SignIn() {
                     <input ref={password} type="password" className="form-control" id="floatingPassword" placeholder="Password"></input>
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
-                
-
-                <button className="w-100 btn btn-lg btn-primary" onClick={handleClickSignIn} type="submit">Sign in</button>
-                <Link className="mt-2 w-100 btn btn-lg btn-success" to='/signup' type="submit">Sign up</Link>
             </form>
-        </main>  
+            <Button className="w-100 btn btn-lg btn-primary" onClick={handleClickSignIn} type="submit">Sign in</Button>
+            <Link className="mt-2 w-100 btn btn-lg btn-success" to='/signup' type="submit">Sign up</Link>
+
+            <ErrorMessage show={show} handleClose={handleClose} page={"Signin Error"} message={"Wrong credentials, try again!"}/>
+        </main>
     );
 }
 
