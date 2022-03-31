@@ -1,15 +1,18 @@
 import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './SignUp.css';
 import { Button } from 'react-bootstrap';
 import UserList from '../SignIn/UserList'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
-import ProfilPicture from './ProfilPicture'
 
 function SignUp() {
+    const navigate = useNavigate();
+
     const [show, setShow] = useState(false);
     const [errortype, setMessage] = useState(false);
-    
+    const [file, setFile] = useState('');
+    const [imagePreviewUrl, setImagePreview] = useState('https://www.shareicon.net/data/512x512/2016/08/18/809259_user_512x512.png');
+
     const username = useRef(null);
     const password = useRef(null);
     const passwordVal = useRef(null);
@@ -18,37 +21,68 @@ function SignUp() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const handleMessage = (message) => {
+        setMessage(message);
+        handleShow();
+
+    };
     const addNewUserToList = (username, password, nickname) => {
         UserList.push({ username: username, password: password, nickname: nickname });
     }
 
-
     function handleClickSignUp() {
-        if (!(username.current.value && username.current.value && nickname.current.value)) {
-            setMessage("Empty box, try again!");
-            handleShow();
+        if (!file.name) {
+            handleMessage("Add a profil picture");
+            return (1);
+        }
+        else if (!(username.current.value && username.current.value && nickname.current.value)) {
+            handleMessage("Empty box, try again!");
             return (1);
         }
         else if (password.current.value !== passwordVal.current.value) {
-            setMessage("There is a mismatch between the passwords, try again!");
-            handleShow();
+            handleMessage("There is a mismatch between the passwords, try again!");
             return (1);
         }
         UserList.forEach((element) => {
             if (element.username === username.current.value) {
-                setMessage("The username already exist, try another!");
-                handleShow();
+                handleMessage("The username already exist, try another!");
                 return (1);
             }
         });
-        
 
         addNewUserToList(username.current.value, password.current.value, nickname.current.value);
+        navigate('/chat');
     }
+
+    const ImgUpload = ({
+        onChange,
+        src
+    }) =>
+        <label htmlFor="photo-upload" className="custom-file-upload fas">
+            <div className="img-wrap img-upload" >
+                <img htmlFor="photo-upload" src={src} />
+            </div>
+            <input id="photo-upload" type="file" onChange={onChange} />
+        </label>
+
+
+    const photoUpload = (e) => {
+        e.preventDefault();
+        const reader = new FileReader();
+        const file = e.target.files[0];
+        reader.onloadend = () => {
+            setFile(file);
+            setImagePreview(reader.result);
+        }
+        reader.readAsDataURL(file);
+    }
+
 
     return (
         <main className="form-signuup">
             <h1 className="h3 mb-3 fw-normal noselect">Create an account.</h1>
+            <ImgUpload onChange={photoUpload} src={imagePreviewUrl} />
+
             <form>
                 <div className="form-floating">
                     <input ref={username} type="username" className="form-control" id="floatingInput" placeholder="Username"></input>
@@ -67,7 +101,7 @@ function SignUp() {
                     <label htmlFor="floatingNickname">Nickname</label>
                 </div>
             </form>
-            
+
             <Button className="w-100 btn btn-lg btn-danger" onClick={handleClickSignUp} type="submit">Sign up</Button>
             <Link className="mt-2 w-100 btn btn-lg btn-secondary" to="/" type="submit">Back</Link>
             <ErrorMessage show={show} handleClose={handleClose} page={"Signup Error"} message={errortype} />
