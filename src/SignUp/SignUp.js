@@ -7,7 +7,7 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
 function SignUp() {
     const navigate = useNavigate();
-
+    const reLetNum = /^(?=.*?\d)(?=.*?[a-zA-Z])[a-zA-Z\d]+$/;
     const [show, setShow] = useState(false);
     const [errortype, setMessage] = useState(false);
     const [file, setFile] = useState('');
@@ -20,12 +20,12 @@ function SignUp() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     const handleMessage = (message) => {
         setMessage(message);
         handleShow();
 
     };
+    
     const addNewUserToList = (username, password, nickname) => {
         UserList.push({ username: username, password: password, nickname: nickname });
     }
@@ -41,6 +41,10 @@ function SignUp() {
         }
         else if (password.current.value !== passwordVal.current.value) {
             handleMessage("There is a mismatch between the passwords, try again!");
+            return (1);
+        }
+        else if(!reLetNum.test(password.current.value)) {
+            handleMessage("The password must contain letters and numbers!");
             return (1);
         }
         UserList.forEach((element) => {
