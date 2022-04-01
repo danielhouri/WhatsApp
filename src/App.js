@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignIn from './SignIn/SignIn';
 import SignUn from './SignUp/SignUp';
-import Chat from './Chat/Chat';
+import Chat from "./Chat/Chat";
 
 function App() {
   return (

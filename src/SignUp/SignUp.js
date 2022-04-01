@@ -11,7 +11,7 @@ function SignUp() {
     const [show, setShow] = useState(false);
     const [errortype, setMessage] = useState(false);
     const [file, setFile] = useState('');
-    const [imagePreviewUrl, setImagePreview] = useState('https://www.shareicon.net/data/512x512/2016/08/18/809259_user_512x512.png');
+    const [imagePreviewUrl, setImagePreview] = useState('https://cdn2.iconfinder.com/data/icons/ui-icon-variations/24/icn-user-add-512.png');
 
     const username = useRef(null);
     const password = useRef(null);
