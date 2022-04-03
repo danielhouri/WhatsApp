@@ -13,7 +13,7 @@ function Messages() {
         </div>
       </div>
       <div className='messages_body overflow-auto'>
-        <Message side={true}/>
+        <Message side={true} />
         <Message />
       </div>
 
@@ -25,8 +25,6 @@ function Messages() {
         </form>
         <i type="submit" className="bi bi-send-fill"></i>
       </div>
-
-
     </div>
   )
 }
