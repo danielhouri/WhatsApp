@@ -7,18 +7,17 @@ function SideBarChat(props) {
         <div className='sidebarchat container'>
             <div className='row'>
                 <div className='col col-2'>
-                    <Avatar src='https://avatars.dicebear.com/api/bottts/:seed.svg' />
+                    <Avatar src={props.src} />
                 </div>
                 <div className='col col-8'>
                     <div className='sidebarchat_info'>
                         <h2>{props.name}</h2>
-                        <p>{props.lastmessage}</p>
+                        <p>{props.message_content}</p>
                     </div>
                 </div>
                 <div className='col col-2'>
-                    <div className="sidebarchat_time"> 19:42 </div>
+                    <div className="sidebarchat_time"> {props.message_time} </div>
                 </div>
-
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import { Avatar } from '@mui/material'
 import React from 'react'
-import Message from './Message'
+import Message from '../Message/Message'
 import "./Messages.css"
 
 function Messages() {

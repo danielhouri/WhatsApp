@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import UserList from '../SignIn/UserList'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
-function SignUp() {
+function SignUp(props) {
     const navigate = useNavigate();
     const reLetNum = /^(?=.*?\d)(?=.*?[a-zA-Z])[a-zA-Z\d]+$/;
     const [show, setShow] = useState(false);
@@ -25,7 +25,7 @@ function SignUp() {
         handleShow();
 
     };
-    
+
     const addNewUserToList = (username, password, nickname) => {
         UserList.push({ username: username, password: password, nickname: nickname });
     }
@@ -43,7 +43,7 @@ function SignUp() {
             handleMessage("There is a mismatch between the passwords, try again!");
             return (1);
         }
-        else if(!reLetNum.test(password.current.value)) {
+        else if (!reLetNum.test(password.current.value)) {
             handleMessage("The password must contain letters and numbers!");
             return (1);
         }
@@ -55,7 +55,11 @@ function SignUp() {
         });
 
         addNewUserToList(username.current.value, password.current.value, nickname.current.value);
-        navigate('/');
+        props.setLoginDetails({
+            username: username.current.value,
+            src: imagePreviewUrl,
+        });
+        navigate('/chat');
     }
 
     const ImgUpload = ({
