@@ -1,0 +1,2 @@
+const logHistory = [{ username: "Daniel", src: "https://avatars.dicebear.com/api/bottts/:seed1.svg", last_message: "asdqwe", last_time: "19:25" },
+{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed2.svg", last_message: "fgdhdfgh", last_time: "12:25" },]

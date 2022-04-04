@@ -1,0 +1,29 @@
+.messages_body_message {
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.messages_body .message_receiver{
+    margin-left: auto;
+    background-color: #dcf8c6;
+}
+
+.messages_body .sidebarchat_time {
+    margin-left: 10px;
+    font-size: xx-small;
+    color: #999;
+}
+
+.noselect {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

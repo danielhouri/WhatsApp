@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { Avatar } from '@mui/material'
 import './SideBar.css'
 import { Button } from 'react-bootstrap';
 import SideBarChat from './SideBarChat';
+import logHistory from '../ChatLog';
 
-function SideBar() {
+function SideBar(props) {
+
     return (
         <div className='sidebar'>
             <div className='sidebar_header'>
-                    <Avatar />
-                    <Button variant="outline-secondary">
-                        <i className="bi bi-chat-right-dots"></i>
-                    </Button>
+                <Avatar src={props.src} />
+                <Button variant="outline-secondary">
+                    <i className="bi bi-chat-right-dots"></i>
+                </Button>
             </div>
             <div className='sidebar_search'>
                 <div className='sidebar_search_container'>

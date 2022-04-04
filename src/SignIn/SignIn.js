@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
 
-function SignIn() {
+function SignIn(props) {
 
     const [show, setShow] = useState(false);
     const navigate = useNavigate();
@@ -23,6 +23,8 @@ function SignIn() {
         UserList.forEach((element) => {
             if ((element.username === username.current.value) && element.password === password.current.value) {
                 valid = true;
+                props.setLoginDetails({username: element.username,
+                src: element.src,});
                 navigate("/chat");
             }
         });

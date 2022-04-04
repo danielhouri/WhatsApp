@@ -13,8 +13,8 @@ function Messages() {
         </div>
       </div>
       <div className='messages_body overflow-auto'>
-        <Message side={true} />
-        <Message />
+        <Message side={true} message_content="Hey guy" message_time="17:52" />
+        <Message message_content="Hey guy" message_time="20:52"/>
       </div>
 
       <div className='messages_footer'>

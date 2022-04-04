@@ -55,7 +55,7 @@ function SignUp() {
         });
 
         addNewUserToList(username.current.value, password.current.value, nickname.current.value);
-        navigate('/chat');
+        navigate('/');
     }
 
     const ImgUpload = ({
