@@ -1,5 +1,15 @@
 import UserList from '../SignIn/UserList'
+import ChatLog from './Components/ChatLog'
 
+function getMessageByUsername (username) {
+    let result;
+    ChatLog.forEach(element => {
+        if (element.username == username) {
+            result = element.data;
+        }
+    })
+    return result;
+};
 
 function getImageByUsername (username) {
     let result = "";
@@ -21,4 +31,4 @@ function getNicknameByUsername (username) {
     return result;
 };
 
-export {getImageByUsername, getNicknameByUsername};
+export {getImageByUsername, getNicknameByUsername, getMessageByUsername};

@@ -1,10 +1,12 @@
-import { Avatar } from '@mui/material'
-import React from 'react'
-import Message from '../Message/Message'
-import "./Messages.css"
-import { getImageByUsername, getNicknameByUsername } from '../../Tools';
+import { Avatar } from '@mui/material';
+import React, { useState } from 'react';
+import Message from '../Message/Message';
+import "./Messages.css";
+import { getImageByUsername, getNicknameByUsername, getMessageByUsername } from '../../Tools';
+
 
 function Messages(props) {
+
   return (
     <div className="messages">
       <div className='messages_header'>
@@ -14,8 +16,8 @@ function Messages(props) {
         </div>
       </div>
       <div className='messages_body overflow-auto'>
-        <Message side={true} message_content="Hey guy" message_time="17:52" />
-        <Message message_content="Hey guy" message_time="20:52" />
+        <Message message_content="contenet" message_time="17:52" />
+        <Message side={true} message_content="contenet" message_time="17:52" />
       </div>
 
       <div className='messages_footer'>

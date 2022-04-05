@@ -1,44 +1,44 @@
 const logHistory = [{
-    username: "Rafael4", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "true", time: "20:25", contenet: "hey" },]
+    username: "Rafael4", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "20:25", contenet: "hey" },]
 },
 {
-    username: "daniel5", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+    username: "daniel5", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
 },
 {
-    username: "dor2", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+    username: "dor2", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
 },
 {
-    username: "ronel5", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+    username: "ronel5", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
 },
 {
-    username: "eviatar1", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+    username: "eviatar1", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
 },
 {
-    username: "Simon", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+    username: "Simon", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
 },
 {
-    username: "manu2", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+    username: "manu2", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
 }]
 
 export default logHistory;
