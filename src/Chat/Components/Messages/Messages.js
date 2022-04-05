@@ -16,8 +16,9 @@ function Messages(props) {
         </div>
       </div>
       <div className='messages_body overflow-auto'>
-        <Message message_content="contenet" message_time="17:52" />
         <Message side={true} message_content="contenet" message_time="17:52" />
+        <Message message_content="contenet" message_time="17:52" />
+
       </div>
 
       <div className='messages_footer'>

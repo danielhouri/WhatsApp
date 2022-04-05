@@ -5,8 +5,7 @@ import './SideBarChat.css'
 function SideBarChat(props) {
     const handleClicked = function () {
         props.setBackgroundShow(props.username);
-    };
-    
+    }
     return (
         <div className='sidebarchat container' onClick={handleClicked}>
             <div className='row'>
