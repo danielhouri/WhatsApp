@@ -2,19 +2,20 @@ import { Avatar } from '@mui/material'
 import React from 'react'
 import Message from '../Message/Message'
 import "./Messages.css"
+import { getImageByUsername, getNicknameByUsername } from '../../Tools';
 
-function Messages() {
+function Messages(props) {
   return (
     <div className="messages">
       <div className='messages_header'>
-        <Avatar src="https://avatars.dicebear.com/api/bottts/:seed1.svg" />
+        <Avatar src={getImageByUsername(props.username)} />
         <div className='messages_header_info'>
-          <h3>Daniel</h3>
+          <h3>{getNicknameByUsername(props.username)}</h3>
         </div>
       </div>
       <div className='messages_body overflow-auto'>
         <Message side={true} message_content="Hey guy" message_time="17:52" />
-        <Message message_content="Hey guy" message_time="20:52"/>
+        <Message message_content="Hey guy" message_time="20:52" />
       </div>
 
       <div className='messages_footer'>
@@ -29,4 +30,4 @@ function Messages() {
   )
 }
 
-export default Messages
+export default Messages;

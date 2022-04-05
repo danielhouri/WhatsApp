@@ -1,12 +1,44 @@
-const logHistory = [{ username: "Daniel", src: "https://avatars.dicebear.com/api/bottts/:seed1.svg", last_message: "asdqwe", last_time: "19:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed2.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed3.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed4.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed5.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed6.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed7.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed8.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed9.svg", last_message: "fgdhdfgh", last_time: "12:25" },
-{ username: "Ron", src: "https://avatars.dicebear.com/api/bottts/:seed1.svg", last_message: "fgdhdfgh", last_time: "12:25" },]
+const logHistory = [{
+    username: "Rafael4", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "true", time: "20:25", contenet: "hey" },]
+},
+{
+    username: "daniel5", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+},
+{
+    username: "dor2", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+},
+{
+    username: "ronel5", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+},
+{
+    username: "eviatar1", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+},
+{
+    username: "Simon", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+},
+{
+    username: "manu2", data: [{ messagetype: "text", side: "true", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "false", time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: "true", time: "17:25", contenet: "hey" },]
+}]
 
 export default logHistory;
