@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# WhatsApp Web Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project use react and bootstrap.
+The following is a list of the modules the project uses:
+- react-bootstrap
+- react-router-dom
 
-## Available Scripts
+## Code Structure
 
-In the project directory, you can run:
+The Webclient contains 3 main section:
+- Signin - Default page, If the connection succeeds there is a fluid transfer to the 'Chat' page, otherwise an error will appear. If the user is not registered there is a button that transfers to the 'Signup' page.
+- Signup
+- Chat
 
 ### `npm start`
 
