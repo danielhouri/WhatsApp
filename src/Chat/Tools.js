@@ -31,4 +31,13 @@ function getNicknameByUsername (username) {
     return result;
 };
 
-export {getImageByUsername, getNicknameByUsername, getMessageByUsername};
+function addNewContact(username){
+    ChatLog.push({username: username,data: [{ messagetype: "", side: "", time: "", contenet: "" }]});
+}
+
+function addNewMessage(username, messagetype, side, time, contenet){
+    let x = getMessageByUsername(username);
+    x.push({ messagetype: messagetype, side: side, time: time, contenet: contenet});
+}
+
+export {getImageByUsername, getNicknameByUsername, getMessageByUsername, addNewContact, addNewMessage};
