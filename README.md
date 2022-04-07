@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# WhatsApp Web Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project use react and bootstrap.
+The following is a list of the modules the project uses:
+- "react-bootstrap"
+- "react-router-dom"
 
-## Available Scripts
+## Code Structure
 
 In the project directory, you can run:
 
