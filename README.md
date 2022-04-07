@@ -7,7 +7,10 @@ The following is a list of the modules the project uses:
 
 ## Code Structure
 
-In the project directory, you can run:
+The webclient contains 3 main section:
+- Signin
+- Signup
+- Chat
 
 ### `npm start`
 
