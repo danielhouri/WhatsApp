@@ -2,8 +2,8 @@
 
 This project use react and bootstrap.
 The following is a list of the modules the project uses:
-- "react-bootstrap"
-- "react-router-dom"
+- 'react-bootstrap'
+- 'react-router-dom'
 
 ## Code Structure
 
