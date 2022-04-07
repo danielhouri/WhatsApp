@@ -14,6 +14,12 @@ function Messages(props) {
     chatBox.current.value='';
     props.setRefresh(props.refresh + 1);
   };
+  const handleEnterMessage = (e)=> {
+    if(e.key==='Enter'){
+      e.preventDefault();
+      handleSendMessage()
+    }
+  }
 
   return (
     <div className="messages">
@@ -28,7 +34,7 @@ function Messages(props) {
         <i className="bi bi-mic-fill"></i>
         <i className="bi bi-paperclip"></i>
         <form>
-          <input ref={chatBox} id='chattextbox' placeholder='Type a Message' />
+          <input ref={chatBox} id='chattextbox' placeholder='Type a Message' onKeyPress={handleEnterMessage} />
         </form>
         <i onClick={handleSendMessage} type="submit" className="bi bi-send-fill"> </i>
       </div>
