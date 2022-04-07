@@ -7,7 +7,7 @@ The following is a list of the modules the project uses:
 
 ## Code Structure
 
-The webclient contains 3 main section:
+The Webclient contains 3 main section:
 - Signin - Default page, If the connection succeeds there is a fluid transfer to the 'Chat' page, otherwise an error will appear. If the user is not registered there is a button that transfers to the 'Signup' page.
 - Signup
 - Chat
