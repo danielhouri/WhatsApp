@@ -93,19 +93,19 @@ function SignUp(props) {
 
             <form>
                 <div className="form-floating">
-                    <input ref={username} type="username" className="form-control" id="floatingInput" placeholder="Username"></input>
+                    <input ref={username} type="username" className="form-control" id="floatingInput" placeholder="Username" onKeyPress={(e) => e.key === 'Enter' && handleClickSignUp()}></input>
                     <label htmlFor="floatingInput">Username</label>
                 </div>
                 <div className="form-floating">
-                    <input ref={password} type="password" className="form-control" id="floatingPassword" placeholder="Password"></input>
+                    <input ref={password} type="password" className="form-control" id="floatingPassword" placeholder="Password" onKeyPress={(e) => e.key === 'Enter' && handleClickSignUp()}></input>
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
                 <div className="form-floating">
-                    <input ref={passwordVal} type="password" className="form-control" id="floatingPasswordVal" placeholder="Password Validation"></input>
+                    <input ref={passwordVal} type="password" className="form-control" id="floatingPasswordVal" placeholder="Password Validation" onKeyPress={(e) => e.key === 'Enter' && handleClickSignUp()}></input>
                     <label htmlFor="floatingPassword">Password Validation</label>
                 </div>
                 <div className="form-floating">
-                    <input ref={nickname} type="nickname" className="form-control" id="floatingNickname" placeholder="Nickname"></input>
+                    <input ref={nickname} type="nickname" className="form-control" id="floatingNickname" placeholder="Nickname" onKeyPress={(e) => e.key === 'Enter' && handleClickSignUp()}></input>
                     <label htmlFor="floatingNickname">Nickname</label>
                 </div>
             </form>
