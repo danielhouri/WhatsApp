@@ -11,7 +11,6 @@ function VoicePopUp(props) {
                     <Button variant="primary" className="button_voice">
                         Record
                     </Button>
-
                 </Modal.Body>
             </Modal>
         </div>
