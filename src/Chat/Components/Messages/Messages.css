@@ -69,3 +69,19 @@
 .bi-send-fill:hover{
     color: black;
 }
+
+.button_voice{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    display: grid;
+}
+
+.modal_record{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    top:30%;
+    left: 13%;
+    justify-content:center;
+}
