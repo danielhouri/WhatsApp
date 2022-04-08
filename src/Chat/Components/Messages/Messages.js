@@ -29,10 +29,10 @@ function Messages(props) {
     setVoiceMessage(true)
   }
 
-  const handleColseVoice = () => {
+  const handleCloseVoice = () => {
     setVoiceMessage(false)
   }
-
+  
   return (
     <div className="messages">
       <div className='messages_header'>
@@ -50,7 +50,7 @@ function Messages(props) {
         </form>
         <i onClick={handleSendMessage} type="submit" className="bi bi-send-fill"> </i>
       </div>
-      <VoicePopUp show={voiceMessage} handleClose={handleColseVoice} username={props.username} />
+      <VoicePopUp show={voiceMessage} handleClose={handleCloseVoice} username={props.username} refresh={props.refresh} setRefresh={props.setRefresh}/>
     </div>
   )
 }

@@ -10,4 +10,4 @@ function MessageVoice(props) {
     )
 }
 
-export default MessageVoice
+export default MessageVoice;
