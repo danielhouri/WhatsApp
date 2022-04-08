@@ -57,6 +57,7 @@ function Messages(props) {
           <input ref={chatBox} placeholder='Type a Message' onKeyPress={handleEnterMessage} />
         </form>
         <i onClick={handleSendMessage} type="submit" className="bi bi-send-fill"> </i>
+        <VoicePopUp show={voiceMessage} handleClose={handleVoiceMessage} page={''}/>
       </div>
       <VoicePopUp show={voiceMessage} handleClose={handleColseVoice} />
     </div>
