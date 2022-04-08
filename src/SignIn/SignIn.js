@@ -42,11 +42,11 @@ function SignIn(props) {
                 <img className="mb-4 noselect" src="icon.svg" alt="logo" width="70" role="img"></img>
                 <h1 className="h3 mb-3 fw-normal noselect">Please sign in</h1>
                 <div className="form-floating">
-                    <input ref={username} type="username" className="form-control" id="floatingInput" placeholder="Username"></input>
+                    <input ref={username} type="username" className="form-control" id="floatingInput" placeholder="Username" onKeyPress={(e) => e.key === 'Enter' && handleClickSignIn()}></input>
                     <label htmlFor="floatingInput">Username</label>
                 </div>
                 <div className="form-floating">
-                    <input ref={password} type="password" className="form-control" id="floatingPassword" placeholder="Password"></input>
+                    <input ref={password} type="password" className="form-control" id="floatingPassword" placeholder="Password" onKeyPress={(e) => e.key === 'Enter' && handleClickSignIn()}></input>
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
             </form>
