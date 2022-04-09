@@ -94,15 +94,8 @@
 .bi-geo-alt:hover{
     color: rgb(173, 204, 230);
 }
-#expanded-toolBar{
-  
-}
-.button_voice{
-    text-align: center;
-    margin: auto;
+
+.button_image{
     display: flex;
-    display: grid;
+    
 }
-
-
-

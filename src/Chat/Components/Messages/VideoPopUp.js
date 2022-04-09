@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import "./VideoPopUp.css"
 import { addNewMessage } from '../../Tools';
 
 function VideoPopUp(props) {

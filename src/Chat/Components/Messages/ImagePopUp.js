@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import "./ImagePopUp.css"
 import { addNewMessage } from '../../Tools';
-
+import './Messages.css'
 
 function ImagePopUp(props) {
     const [imageoSrc, setImageSrc] = useState("");
@@ -24,15 +23,9 @@ function ImagePopUp(props) {
                     <div className="modal-header">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                     </div>
-                    <div className="modal-body">
-                        <div className="input-group mb-3">
-                            <div className="input-group-prepend">
-                                <button className="btn btn-outline-secondary" type="button" data-bs-dismiss="modal" onClick={handleImage}>Upload</button>
-                            </div>
-                            <div className="custom-file">
-                                <input type="file" className="custom-file-input" accept='image/*' id="inputGroupFile03" onChange={handleUpload}/>
-                            </div>
-                        </div>
+                    <div className="modal-body button_image">
+                            <input type="file" class="form-control" id="inputGroupFile02" onChange={handleUpload} />
+                            <label class="input-group-text" for="inputGroupFile02" onClick={handleImage}>Upload</label>
                     </div>
                 </div>
             </div>
