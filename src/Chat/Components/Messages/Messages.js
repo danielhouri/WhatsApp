@@ -5,11 +5,13 @@ import { getImageByUsername, getNicknameByUsername, getMessageByUsername, addNew
 import "../ChatLog";
 import MessagesBody from './MessagesBody';
 import VoicePopUp from '../VoiceRecorder/VoicePopUp';
-import FilePopUp from './FilePopUp';
+import ImagePopUp from './ImagePopUp';
+import VideoPopUp from './VideoPopUp';
 
 function Messages(props) {
   const [voiceMessage, setVoiceMessage] = useState(false);
-  const [fileWindow, setFileWindow] = useState(false);
+  const [imageWindow, setImageWindow] = useState(true);
+  const [videoWindow, setVideoWindow] = useState(true);
   const chatBox = useRef(null);
   const [toolBar, setToolBar] = useState(true)
   const handleSendMessage = () => {
@@ -36,12 +38,14 @@ function Messages(props) {
   const handleCloseVoice = () => {
     setVoiceMessage(false)
   }
-  const handleOpenChoosFile = () => {
-    setFileWindow(true)
+  const handleCloseChoosImage = () => {
+    setImageWindow(false)
   }
-  const handleCloseChoosFile = () => {
-    setFileWindow(false)
+  const handleCloseChoosVideo = () => {
+    setVideoWindow(false)
   }
+
+
   return (
     <div className="messages">
       <div className='messages_header'>
@@ -53,8 +57,8 @@ function Messages(props) {
       <MessagesBody listChat={getMessageByUsername(props.username)}/>
       
       <div hidden={toolBar} className='toolbar'>
-          <i className="bi bi-image" onClick={handleOpenChoosFile} data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
-          <i className="bi bi-camera-reels"></i>
+          <i className="bi bi-image" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+          <i className="bi bi-camera-reels" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"></i>
           <i className="bi bi-geo-alt"></i> 
       </div>
       <div className='messages_footer'>
@@ -66,7 +70,8 @@ function Messages(props) {
         <i onClick={handleSendMessage} type="submit" className="bi bi-send-fill"> </i>
       </div>
       <VoicePopUp show={voiceMessage} handleClose={handleCloseVoice} username={props.username} refresh={props.refresh} setRefresh={props.setRefresh} />
-      <FilePopUp show={fileWindow} handleClose={handleCloseChoosFile} username={props.username}/>
+      <ImagePopUp />
+      <VideoPopUp username={props.username}/>
     </div>
   )
 }
