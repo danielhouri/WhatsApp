@@ -1,0 +1,11 @@
+.modal_file {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    top: 30%;
+    left:50%;
+    width:fit-content
+}
+#inputGroupFile03{
+    display: block;
+}
