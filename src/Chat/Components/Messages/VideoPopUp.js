@@ -3,17 +3,20 @@ import { Button, Modal } from 'react-bootstrap';
 import "./VideoPopUp.css"
 import { addNewMessage } from '../../Tools';
 
-
-
 function VideoPopUp(props) {
     const [videoSrc, setVideoSrc] = useState("");
-    const handleVideo = (e) => {
-        setVideoSrc(e.target.files[0])
+
+    const handleVideo = () => {
         const d = new Date();
         let time = d.getHours() + ":" + d.getMinutes();
-        addNewMessage(props.username, 'voice', true, time, videoSrc);
+        let temp = URL.createObjectURL(videoSrc);
+        addNewMessage(props.username, 'video', true, time, temp);
+        props.setRefresh(props.refresh + 1);
     }
 
+    const handleUpload = (e) => {
+        setVideoSrc(e.target.files[0]);
+    }
 
     return (
         <div className="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -28,7 +31,7 @@ function VideoPopUp(props) {
                                 <button className="btn btn-outline-secondary" type="button" data-bs-dismiss="modal" onClick={handleVideo}>Upload</button>
                             </div>
                             <div className="custom-file">
-                                <input type="file" className="custom-file-input" accept='video/*' id="inputGroupFile03" />
+                                <input type="file" className="custom-file-input" accept='video/*' id="inputGroupFile03" onChange={handleUpload}/>
                             </div>
                         </div>
                     </div>
@@ -38,4 +41,4 @@ function VideoPopUp(props) {
     )
 }
 
-export default VideoPopUp
+export default VideoPopUp;

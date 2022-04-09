@@ -10,10 +10,9 @@ import VideoPopUp from './VideoPopUp';
 
 function Messages(props) {
   const [voiceMessage, setVoiceMessage] = useState(false);
-  const [imageWindow, setImageWindow] = useState(true);
-  const [videoWindow, setVideoWindow] = useState(true);
   const chatBox = useRef(null);
-  const [toolBar, setToolBar] = useState(true)
+  const [toolBar, setToolBar] = useState(true);
+
   const handleSendMessage = () => {
     const d = new Date();
     let time = d.getHours() + ":" + d.getMinutes();
@@ -37,12 +36,6 @@ function Messages(props) {
 
   const handleCloseVoice = () => {
     setVoiceMessage(false)
-  }
-  const handleCloseChoosImage = () => {
-    setImageWindow(false)
-  }
-  const handleCloseChoosVideo = () => {
-    setVideoWindow(false)
   }
 
 
@@ -70,8 +63,8 @@ function Messages(props) {
         <i onClick={handleSendMessage} type="submit" className="bi bi-send-fill"> </i>
       </div>
       <VoicePopUp show={voiceMessage} handleClose={handleCloseVoice} username={props.username} refresh={props.refresh} setRefresh={props.setRefresh} />
-      <ImagePopUp />
-      <VideoPopUp username={props.username}/>
+      <ImagePopUp username={props.username} refresh={props.refresh} setRefresh={props.setRefresh}/>
+      <VideoPopUp username={props.username} refresh={props.refresh} setRefresh={props.setRefresh}/>
     </div>
   )
 }

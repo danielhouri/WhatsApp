@@ -13,7 +13,7 @@ function MessagesBody(props) {
             return <MessageVoice side={element['side']} audioURL={element['contenet']} key={key} message_time={element['time']} />
         }
         else if(element['messagetype'] == "image"){
-            return <ImageMassage side={element['side']} file={element['contenet']} key={key} message_time={element['time']} />
+            return <ImageMassage side={element['side']} imageSrc={element['contenet']} key={key} message_time={element['time']} />
         }
         else if(element['messagetype'] == "video"){
             return <VideoMessage side={element['side']} videoSrc={element['contenet']} key={key} message_time={element['time']} />

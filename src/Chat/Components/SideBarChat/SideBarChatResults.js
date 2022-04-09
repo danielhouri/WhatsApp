@@ -13,6 +13,12 @@ function SideBarChatResults({ chatList, setBackgroundShow }) {
                 if (element.data.at(-1).messagetype == "voice") {
                     last_message[0]="Voice Message";
                 }
+                else if(element.data.at(-1).messagetype == "video") {
+                    last_message[0]="Video Message";
+                }
+                else if(element.data.at(-1).messagetype == "image") {
+                    last_message[0]="Image Message";
+                }
             }
         })
 
