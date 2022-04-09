@@ -10,3 +10,8 @@ body {
 ::-webkit-scrollbar-thumb {
     background: rgb(128, 128, 128);
 }
+
+.overflow-auto{
+    overflow-x: hidden!important;
+    overflow-y: auto!important;
+}

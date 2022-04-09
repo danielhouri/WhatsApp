@@ -1,7 +1,7 @@
 import React from 'react'
 import Message from '../Message/Message';
-import MessageVoice from '../Message/MessageVoice';
-import ImageMassage from '../Message/ImageMassage';
+import VoiceMessage from '../Message/VoiceMessage';
+import ImageMessage from '../Message/ImageMessage';
 import VideoMessage from '../Message/VideoMessage';
 
 function MessagesBody(props) {
@@ -10,10 +10,10 @@ function MessagesBody(props) {
             return <Message side={element['side']} message_content={element['contenet']} key={key} message_time={element['time']} />
         }
         else if(element['messagetype'] == "voice"){
-            return <MessageVoice side={element['side']} audioURL={element['contenet']} key={key} message_time={element['time']} />
+            return <VoiceMessage side={element['side']} audioURL={element['contenet']} key={key} message_time={element['time']} />
         }
         else if(element['messagetype'] == "image"){
-            return <ImageMassage side={element['side']} imageSrc={element['contenet']} key={key} message_time={element['time']} />
+            return <ImageMessage side={element['side']} imageSrc={element['contenet']} key={key} message_time={element['time']} />
         }
         else if(element['messagetype'] == "video"){
             return <VideoMessage side={element['side']} videoSrc={element['contenet']} key={key} message_time={element['time']} />

@@ -1,5 +1,4 @@
-import React, { useRef, useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import React, { useState } from 'react';
 import "./VideoPopUp.css"
 import { addNewMessage } from '../../Tools';
 
@@ -31,7 +30,7 @@ function VideoPopUp(props) {
                                 <button className="btn btn-outline-secondary" type="button" data-bs-dismiss="modal" onClick={handleVideo}>Upload</button>
                             </div>
                             <div className="custom-file">
-                                <input type="file" className="custom-file-input" accept='video/*' id="inputGroupFile03" onChange={handleUpload}/>
+                                <input type="file" className="custom-file-input" accept='video/*' id="inputGroupFile03" onChange={handleUpload} />
                             </div>
                         </div>
                     </div>

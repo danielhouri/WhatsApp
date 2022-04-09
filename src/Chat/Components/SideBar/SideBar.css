@@ -51,5 +51,5 @@
 .sidebar_sidebar_chats {
     flex: 1;
     overflow-y: scroll;
-    overflow-x:hidden;  
+    overflow-x:hidden!important;  
 }

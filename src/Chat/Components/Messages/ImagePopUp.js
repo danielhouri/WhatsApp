@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
 import "./ImagePopUp.css"
 import { addNewMessage } from '../../Tools';
 
@@ -41,4 +40,4 @@ function ImagePopUp(props) {
     )
 }
 
-export default ImagePopUp
+export default ImagePopUp;
