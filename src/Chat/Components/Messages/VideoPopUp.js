@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { addNewMessage } from '../../Tools';
-
+import './VideoPopUp.css'
 function VideoPopUp(props) {
     const [videoSrc, setVideoSrc] = useState("");
 
@@ -15,23 +15,16 @@ function VideoPopUp(props) {
     const handleUpload = (e) => {
         setVideoSrc(e.target.files[0]);
     }
-
     return (
-        <div className="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                     </div>
-                    <div className="modal-body">
-                        <div className="input-group mb-3">
-                            <div className="input-group-prepend">
-                                <button className="btn btn-outline-secondary" type="button" data-bs-dismiss="modal" onClick={handleVideo}>Upload</button>
-                            </div>
-                            <div className="custom-file">
-                                <input type="file" className="custom-file-input" accept='video/*' id="inputGroupFile03" onChange={handleUpload} />
-                            </div>
-                        </div>
+                    <div className="modal-body button_image">
+                        <input type="file" accept='video/*' class="form-control" id="inputGroupFile02" onChange={handleUpload} />
+                        <button class="input-group-text" for="inputGroupFile02" data-bs-dismiss="modal" onClick={handleVideo}>Upload</button>
                     </div>
                 </div>
             </div>
