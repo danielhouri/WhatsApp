@@ -70,7 +70,7 @@ function SignUp(props) {
             <div className="img-wrap img-upload" >
                 <img htmlFor="photo-upload" src={src} />
             </div>
-            <input id="photo-upload" type="file" onChange={onChange} />
+            <input id="photo-upload" accept='image/*' type="file" onChange={onChange} />
         </label>
 
 
