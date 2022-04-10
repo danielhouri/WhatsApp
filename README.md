@@ -27,6 +27,7 @@ manage to send the requsted message type
 -user can add a new chat by clicking the message icon that on the top of the sidebar user only need to enter the name and chat will appper on sidebar chat
 -the site also support finding a spcific chat from list by writing the nickname aka name that is on the chat
 -the site support using click functionality and pressing the enter key
+The page will reload when you make changes.
 
 ### `Run the project`
 To run the project you need to enter in the terminal. You have to install the following before to run:
@@ -36,10 +37,6 @@ To run the project you need to enter in the terminal. You have to install the fo
 * react-bootstrap
 If it's already installed, enter in the terminal "npm start", open [http://localhost:3000](http://localhost:3000) to view it, and enjoy.
 
-###submitting:
+### Submitting:
 - Daniel Houri: 314712563
 - Dor Huri: 209409218
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
