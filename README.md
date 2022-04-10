@@ -10,7 +10,7 @@ The following is a list of the modules the project uses:
 The Webclient contains 3 main section:
 - Signin - Default page, If the connection succeeds there is a fluid transfer to the 'Chat' page, otherwise an error will appear. If the user is not registered there is a button that transfers to the 'Signup' page.
 - Signup - The registration page where the user needs to insert a user name and a password that contains digits and letters both.
-- Chat - the main part of the site after logIn of an existing user or signUp for a new user we get the chat screen whice contians a defult chat log between of some alredy registerd user and you can sent them or other user masseges of 4 type: text,voice,image,video
+- Chat - The main part of the Web client, this section contains the following components: SideBar and Message (where the messages are shown). This Message's components support the following type of content: text, voice, image, and video.
 
 ## Components:
 -the webstie was built using react js so for good programing the site structure from component we elaborate mostly on chat component
