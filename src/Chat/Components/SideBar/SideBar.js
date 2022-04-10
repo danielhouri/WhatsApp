@@ -20,13 +20,13 @@ function SideBar(props) {
     };
     const handleOnClose = () => {
         setNewChat(false);
-
     };
 
     return (
         <div className='sidebar'>
             <div className='sidebar_header'>
                 <Avatar src={props.loginDetails['src']} />
+                <h4 id='aaa'>{props.loginDetails.username}</h4>
                 <Button variant="outline-secondary" onClick={handleOnShow}>
                     <i className="bi bi-chat-right-dots"></i>
                 </Button>
