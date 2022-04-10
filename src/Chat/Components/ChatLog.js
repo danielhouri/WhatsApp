@@ -23,10 +23,16 @@ const logHistory = [{
     { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
 },
 {
+    username: "home", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
+},
+{
     username: "manu2", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: true, time: "17:25", contenet: "hey" },]
-}]
+}];
 
 export default logHistory;

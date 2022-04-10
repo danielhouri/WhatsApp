@@ -79,3 +79,7 @@
     display: flex;
     width:fit-content;
 }
+
+.dropdown-menu > i:hover{
+    color: rgb(147, 231, 199);
+}

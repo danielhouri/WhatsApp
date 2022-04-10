@@ -20,7 +20,7 @@ function SideBar(props) {
     };
     const handleOnClose = () => {
         setNewChat(false);
-        
+
     };
 
     return (
