@@ -29,21 +29,16 @@ manage to send the requsted message type
 -the site support using click functionality and pressing the enter key
 
 ### `Run the project`
-to run the project you need to enter in the terminal the follwing snippet
-if you dont alredy have react you need:
-npm install
-npm start
-if you have react install on your idea enter only:
-npm start
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run the project you need to enter in the terminal. You have to install the following before to run:
+* node JS
+* npm 
+* react-router-dom
+* react-bootstrap
+If it's already installed, enter in the terminal "npm start", open [http://localhost:3000](http://localhost:3000) to view it, and enjoy.
 
--hope you like our project
--submitting:
--Daniel Huri
--id:314712563
--Dor Huri
--id:209409218
+###submitting:
+- Daniel Houri: 314712563
+- Dor Huri: 209409218
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
