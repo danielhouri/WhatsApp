@@ -9,8 +9,10 @@ The following is a list of the modules the project uses:
 
 The Webclient contains 3 main section:
 - Signin - Default page, If the connection succeeds there is a fluid transfer to the 'Chat' page, otherwise an error will appear. If the user is not registered there is a button that transfers to the 'Signup' page.
-- Signup
-- Chat
+- Signup - page for registering to the website user need to input a user name and a password that contains numbers and letters otherwise. the signup woludnt be succssful when all d
+- Chat. - 
+to run project
+//componnet
 
 ### `npm start`
 
