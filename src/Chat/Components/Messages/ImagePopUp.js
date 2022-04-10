@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { addNewMessage } from '../../Tools';
-import './Messages.css'
-import './ImagePopUp.css'
+import './ImagePopUp.css';
+
 function ImagePopUp(props) {
     const [imageoSrc, setImageSrc] = useState("");
 
@@ -17,15 +17,15 @@ function ImagePopUp(props) {
     }
 
     return (
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
+        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                    <div className="modal-header">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                     </div>
                     <div className="modal-body button_image">
-                        <input type="file" accept='image/*' class="form-control" id="inputGroupFile02" onChange={handleUpload} />
-                        <button class="input-group-text" for="inputGroupFile02" data-bs-dismiss="modal" onClick={handleImage}>Upload</button>
+                        <input type="file" accept='image/*' className="form-control" id="inputGroupFile02" onChange={handleUpload} />
+                        <button className="input-group-text" htmlFor="inputGroupFile02" data-bs-dismiss="modal" onClick={handleImage}>Upload</button>
                     </div>
                 </div>
             </div>

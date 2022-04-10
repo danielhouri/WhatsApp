@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { addNewMessage } from '../../Tools';
-import './VideoPopUp.css'
+import './VideoPopUp.css';
+
 function VideoPopUp(props) {
     const [videoSrc, setVideoSrc] = useState("");
 
@@ -16,15 +17,15 @@ function VideoPopUp(props) {
         setVideoSrc(e.target.files[0]);
     }
     return (
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
+        <div className="modal fade" id="exampleModal1" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                    <div className="modal-header">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                     </div>
                     <div className="modal-body button_image">
-                        <input type="file" accept='video/*' class="form-control" id="inputGroupFile02" onChange={handleUpload} />
-                        <button class="input-group-text" for="inputGroupFile02" data-bs-dismiss="modal" onClick={handleVideo}>Upload</button>
+                        <input type="file" accept='video/*' className="form-control" id="inputGroupFile02" onChange={handleUpload} />
+                        <button className="input-group-text" htmlFor="inputGroupFile02" data-bs-dismiss="modal" onClick={handleVideo}>Upload</button>
                     </div>
                 </div>
             </div>

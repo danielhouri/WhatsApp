@@ -30,7 +30,6 @@
     padding: 30px;
 }
 
-
 .messages_footer {
     display: flex;
     justify-content: space-between;
@@ -50,22 +49,7 @@
     padding: 10px;
     border: none;
 }
-.toolbar{
-    color: rgb(199, 192, 192);
-    width: 10%;
-    height: 7%;
-    border: 1px solid red;
-}
-.toolbar > i{
-    float: left;
-    width: 33%;
-    text-align: center;
-    padding: 12px 0;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    cursor: pointer;
-    color: #555
-}
+
 .messages_footer > i {
     color: grey;
     margin-left: 5px;
@@ -73,29 +57,25 @@
     font-size: x-large;
 }
 
-
-.bi-mic-fill:hover{
-    color: black;
-}
-
-.bi-paperclip:hover{
-    color: black;
-}
-
-.bi-send-fill:hover{
-    color: black;
-}
-.bi-image:hover{
-    color: rgb(173, 204, 230);
-}
-.bi-camera-reels:hover{
-    color: rgb(173, 204, 230);
-}
-.bi-geo-alt:hover{
-    color: rgb(173, 204, 230);
+.messages_footer > i:hover{
+    color: rgb(147, 231, 199);
 }
 
 .button_image{
     display: flex;
-    
+}
+
+.dropdown-menu{
+    background-color:transparent;
+    min-width:fit-content;
+    border-color: transparent;
+}
+
+.dropdown-menu > i{
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    font-size:x-large;
+    display: flex;
+    width:fit-content;
 }

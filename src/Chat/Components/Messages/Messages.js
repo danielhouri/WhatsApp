@@ -45,9 +45,9 @@ function Messages(props) {
       <MessagesBody listChat={getMessageByUsername(props.username)} />
       <div className='messages_footer'>
         <i className="bi bi-mic-fill" onClick={handleOpenVoice}> </i>
-        <div class="dropdown">
+        <div className="dropdown messages_footer">
           <i className="bi bi-paperclip" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <i className="bi bi-image dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
             <i className="bi bi-camera-reels dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal1"></i>
           </ul>
