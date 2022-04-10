@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import { Avatar } from '@mui/material'
 import './SideBar.css'
 import { Button } from 'react-bootstrap';
@@ -26,6 +26,8 @@ function SideBar(props) {
         <div className='sidebar'>
             <div className='sidebar_header'>
                 <Avatar src={props.loginDetails['src']} />
+                {}
+                <h4 id='aaa'>{props.loginDetails.username ? props.loginDetails.username : ''}</h4>
                 <Button variant="outline-secondary" onClick={handleOnShow}>
                     <i className="bi bi-chat-right-dots"></i>
                 </Button>
