@@ -28,7 +28,7 @@ manage to send the requsted message type
 -the site also support finding a spcific chat from list by writing the nickname aka name that is on the chat
 -the site support using click functionality and pressing the enter key
 
-### `npm start`
+### `Run the project`
 to run the project you need to enter in the terminal the follwing snippet
 if you dont alredy have react you need:
 npm install
