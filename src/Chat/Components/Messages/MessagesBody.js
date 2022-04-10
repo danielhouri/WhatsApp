@@ -2,7 +2,7 @@ import React from 'react'
 import Message from '../Message/Message';
 import VoiceMessage from '../Message/VoiceMessage';
 import ImageMessage from '../Message/ImageMessage';
-import VideoMessage from '../Message/VideoMessage';
+import VideoMessage from '../Message/VideoMessage'; 
 
 function MessagesBody(props) {
     const messagesList = props.listChat.map((element, key) => {
