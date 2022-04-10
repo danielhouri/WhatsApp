@@ -12,7 +12,7 @@ The Webclient contains 3 main section:
 - Signup - page for registering to the website user need to input a user name and a password that contains numbers and letters otherwise. the signup woludnt be succssful when all d
 - Chat. - the main part of the site after logIn of an existing user or signUp for a new user we get the chat screen whice contians a defult chat log between of some alredy registerd user and you can sent them or other user masseges of 4 type: text,voice,image,video
 
-component and more:
+## Components:
 -the webstie was built using react js so for good programing the site structure from component we elaborate mostly on chat component
 -signIn like mentioned is the Default page and you can route between site pages and if you enter a correct username and password you get the chat screen
 -sugnUp is for registering with the site but only if the user enter a all the valid content that the page ask if the user dont meet the Criteria
