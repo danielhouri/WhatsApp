@@ -3,7 +3,7 @@ import imageFile from '../../Resources/img_girl.jpg';
 import voiceFile from '../../Resources/horse.ogv';
 
 const logHistory = [{
-    username: "Rafael4", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "pablo" },
+    username: "Gali4", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "pablo" },
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "what a nice day" },
     { messagetype: "text", side: true, time: "20:25", contenet: "yes" },
@@ -24,7 +24,7 @@ const logHistory = [{
     { messagetype: "text", side: true, time: "17:25", contenet: "bye" },]
 },
 {
-    username: "Simon", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    username: "coral", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "go to work" },
     { messagetype: "text", side: true, time: "17:25", contenet: "ok" },]

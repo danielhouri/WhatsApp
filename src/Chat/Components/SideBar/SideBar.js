@@ -1,5 +1,4 @@
 import React, {  useState } from 'react'
-import { Avatar } from '@mui/material'
 import './SideBar.css'
 import { Button } from 'react-bootstrap';
 import logHistory from '../ChatLog';
@@ -7,6 +6,7 @@ import SideBarChatResults from '../SideBarChat/SideBarChatResults';
 import Search from '../SideBarChat/Search';
 import { getNicknameByUsername } from '../../Tools';
 import NewChat from './NewChat';
+import userDefualt from '../../../avatar/user.png'
 
 function SideBar(props) {
     const [searchQuery, setSearchQuery] = useState(logHistory);
@@ -25,7 +25,7 @@ function SideBar(props) {
     return (
         <div className='sidebar'>
             <div className='sidebar_header'>
-                <Avatar src={props.loginDetails['src']} />
+            {props.loginDetails['src'] ? <img id='aaaa' src={props.loginDetails['src']} /> : <img id='aaaa' src={userDefualt}/> }
                 <h4 id='aaa'>{props.loginDetails.username ? props.loginDetails.username : ''}</h4>
                 <Button variant="outline-secondary" onClick={handleOnShow}>
                     <i className="bi bi-chat-right-dots"></i>

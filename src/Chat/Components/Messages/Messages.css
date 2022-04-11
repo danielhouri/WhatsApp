@@ -83,3 +83,9 @@
 .dropdown-menu > i:hover{
     color: rgb(147, 231, 199);
 }
+#bbb{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
