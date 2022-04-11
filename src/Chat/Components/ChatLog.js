@@ -3,7 +3,7 @@ import imageFile from '../../Resources/img_girl.jpg';
 import voiceFile from '../../Resources/horse.ogv';
 
 const logHistory = [{
-    username: "Gali4", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "pablo" },
+    username: "Gali4", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "what a nice day" },
     { messagetype: "text", side: true, time: "20:25", contenet: "yes" },
@@ -30,10 +30,10 @@ const logHistory = [{
     { messagetype: "text", side: true, time: "17:25", contenet: "ok" },]
 },
 {
-    username: "home", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    username: "avihay", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
-    { messagetype: "text", side: false, time: "17:25", contenet: "what is your name?" },
-    { messagetype: "text", side: true, time: "17:25", contenet: "my nickname is hemi" },]
+    { messagetype: "text", side: true, time: "17:25", contenet: "what is your name?" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "my name is pablo" },]
 },
 {
     username: "manu2", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
