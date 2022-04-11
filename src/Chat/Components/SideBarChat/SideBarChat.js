@@ -11,7 +11,7 @@ function SideBarChat(props) {
         <div className='sidebarchat container' onClick={handleClicked}>
             <div className='row'>
                 <div className='col col-2 sidebarchat_avatar'>
-                    {props.src ? <img id='aa' src={props.src} /> : <img id='aa' src={userDefualt} />}
+                    {props.src ? <img className='avatar' src={props.src} /> : <img className='avatar' src={userDefualt} />}
                 </div>
                 <div className='col col-8'>
                     <div className='sidebarchat_info'>

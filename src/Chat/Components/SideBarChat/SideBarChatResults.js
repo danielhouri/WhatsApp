@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import SideBarChat from './SideBarChat';
 import logHistory from '../ChatLog';
 import { getImageByUsername, getNicknameByUsername } from '../../Tools';

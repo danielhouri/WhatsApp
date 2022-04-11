@@ -30,4 +30,4 @@ function VoicePopUp(props) {
     )
 }
 
-export default VoicePopUp
+export default VoicePopUp;
