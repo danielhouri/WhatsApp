@@ -36,7 +36,7 @@ function Messages(props) {
   return (
     <div className="messages">
       <div className='messages_header'>
-        <img id='bbb' src={getImageByUsername(props.username)} />
+        <img className='avatar1' src={getImageByUsername(props.username)} />
         <div className='messages_header_info'>
           <h3>{getNicknameByUsername(props.username)}</h3>
         </div>
