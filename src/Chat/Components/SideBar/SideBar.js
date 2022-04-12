@@ -33,7 +33,7 @@ function SideBar(props) {
             </div>
             <Search doSearch={doSearch} />
             <SideBarChatResults chatList={searchQuery} setBackgroundShow={props.setBackgroundShow} />
-            <NewChat show={newChat} handleClose={handleOnClose} page={"new chat"} />
+            <NewChat username={props.loginDetails.username} show={newChat} handleClose={handleOnClose} page={"new chat"} />
         </div>
     )
 }

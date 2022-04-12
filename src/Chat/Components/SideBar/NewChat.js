@@ -1,11 +1,49 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Button, Modal } from 'react-bootstrap';
-import { addNewContact } from '../../Tools';
+import ErrorMessage from '../../../ErrorMessage/ErrorMessage';
+import { addNewContact, getNicknameByUsername } from '../../Tools';
+import ChatLog from '../../Components/ChatLog'
+
 function NewChat(props) {
     const textBox = useRef(null);
+    const [show, setShow] = useState(false);
+    const [messageErr, setMessageErr] = useState('');
+    const handleMessage= () =>{
+        let state = ' is not register';
+        let searchSelf =false;
+        if(textBox.current.value == props.username){
+            state = ' it\'s your own username';
+            searchSelf = true;
+        }
+        else if(!searchSelf && getUsernameChat(textBox.current.value)!=''){
+            state = ' already started a chat with you';
+        }
+        let temp = 'username: ' + textBox.current.value + state;
+        setMessageErr(temp);
+    }
+    const handleClose = () => setShow(false);
+    function getUsernameChat(username) {
+        let result = '';
+        ChatLog.forEach(element => {
+            if (element.username == username) {
+                result = element.data.username;
+            }
+        })
+            return result;
+    };
+
+    const handleOpen = () => setShow(true);
     const handleAddClose = () => {
-        addNewContact(textBox.current.value);
-        props.handleClose();
+        let txt = textBox.current.value;
+        if (getNicknameByUsername(txt) != "" && txt && getUsernameChat(txt)===''&& txt != props.username) {
+            addNewContact(txt);
+            props.handleClose();
+        }
+        else {
+            props.handleClose();
+            handleMessage()
+            handleOpen()
+        }
     }
     return (
         <div>
@@ -14,7 +52,7 @@ function NewChat(props) {
                     <Modal.Title>New Chat</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <label htmlFor="recipient-name" className="col-form-label">Recipient:</label>
+                    <label htmlFor="recipient-name" className="col-form-label">Enter username:</label>
                     <input ref={textBox} className="form-control new_chat" onKeyPress={(e) => e.key === 'Enter' && handleAddClose()}></input>
                 </Modal.Body>
                 <Modal.Footer>
@@ -23,6 +61,8 @@ function NewChat(props) {
                     </Button>
                 </Modal.Footer>
             </Modal>
+            <ErrorMessage show={show} handleClose={handleClose} page={"Error invalid username"} message={messageErr} />
+
         </div>
     )
 }
