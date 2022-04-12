@@ -26,7 +26,7 @@ function SideBar(props) {
         <div className='sidebar'>
             <div className='sidebar_header'>
             {props.loginDetails['src'] ? <img className='avatar' src={props.loginDetails['src']} /> : <img className='avatar' src={userDefualt}/> }
-                <h4 className='avatar2'>{props.loginDetails.username ? props.loginDetails.username : ''}</h4>
+                <h4 className='avatar2'>Hi {props.loginDetails.username ? props.loginDetails.username : ''}</h4>
                 <Button variant="outline-secondary" onClick={handleOnShow}>
                     <i className="bi bi-chat-right-dots"></i>
                 </Button>
