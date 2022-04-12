@@ -29,7 +29,7 @@ To run the project you need to enter in the terminal. You have to install the fo
 
 If it's already installed, enter in the terminal and type "npm start".
 
-Open [http://localhost:3000](http://localhost:3000) to view it, and enjoy.
+Open [http://localhost:3000](http://localhost:3000), and enjoy.
 
 ### Submitting:
 - Daniel Houri: 314712563
