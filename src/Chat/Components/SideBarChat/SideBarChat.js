@@ -1,6 +1,6 @@
 import React from 'react';
 import './SideBarChat.css';
-import userDefualt from '../../../avatar/user.png'
+import userDefualt from '../../../avatar/user.png';
 
 
 function SideBarChat(props) {

@@ -6,7 +6,7 @@ import SideBarChatResults from '../SideBarChat/SideBarChatResults';
 import Search from '../SideBarChat/Search';
 import { getNicknameByUsername } from '../../Tools';
 import NewChat from './NewChat';
-import userDefualt from '../../../avatar/user.png'
+import userDefualt from '../../../avatar/user.png';
 
 function SideBar(props) {
     const [searchQuery, setSearchQuery] = useState(logHistory[props.loginDetails.username]);
