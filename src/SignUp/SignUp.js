@@ -4,6 +4,7 @@ import './SignUp.css';
 import { Button } from 'react-bootstrap';
 import UserList from '../SignIn/UserList'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
+import { getNicknameByUsername } from '../Chat/Tools';
 
 function SignUp(props) {
     const navigate = useNavigate();
@@ -45,6 +46,10 @@ function SignUp(props) {
         }
         else if (!reLetNum.test(password.current.value)) {
             handleMessage("The password must contain letters and numbers!");
+            return (1);
+        }
+        else if(getNicknameByUsername(username.current.value) != "") {
+            handleMessage("The username is already exist, try another");
             return (1);
         }
         UserList.forEach((element) => {

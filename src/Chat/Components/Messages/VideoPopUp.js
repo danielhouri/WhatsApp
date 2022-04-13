@@ -9,7 +9,7 @@ function VideoPopUp(props) {
         const d = new Date();
         let time = d.getHours() + ":" + d.getMinutes();
         let temp = URL.createObjectURL(videoSrc);
-        addNewMessage(props.username, 'video', true, time, temp);
+        addNewMessage(props.username, 'video', true, time, temp, props.ownerUsername);
         props.setRefresh(props.refresh + 1);
     }
 

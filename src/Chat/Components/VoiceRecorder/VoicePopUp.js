@@ -5,7 +5,7 @@ import './VoicePopUp.css';
 
 
 function VoicePopUp(props) {
-    let [audioURL, isRecording, startRecording, stopRecording] = useRecorder(props.username, props.refresh, props.setRefresh);
+    let [audioURL, isRecording, startRecording, stopRecording] = useRecorder(props.username, props.refresh, props.setRefresh, props.ownerUsername);
 
     const handleStopRecording = () => {
         stopRecording();

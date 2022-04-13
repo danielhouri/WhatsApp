@@ -2,7 +2,40 @@ import videoFile from '../../Resources/movie.mp4';
 import imageFile from '../../Resources/img_girl.jpg';
 import voiceFile from '../../Resources/horse.ogv';
 
-const logHistory = [{
+const logHistory = {daniel5: [{
+    username: "Gali4", data: [{ messagetype: "", side: "", time: "", contenet: "" }]
+},
+{
+    username: "ronel5", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "whatsup" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "you mean whatsapp" },]
+},
+{
+    username: "eviatar1", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hello" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "bye" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "bye" },]
+},
+{
+    username: "coral", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "go to work" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "ok" },]
+},
+{
+    username: "avihay", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "what is your name?" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "my name is pablo" },]
+},
+{
+    username: "manu2", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
+    { messagetype: "text", side: false, time: "17:25", contenet: "12*7?" },
+    { messagetype: "text", side: true, time: "17:25", contenet: "84" },]
+}],
+dor2: [{
     username: "Gali4", data: [{ messagetype: "text", side: true, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "what a nice day" },
@@ -40,6 +73,6 @@ const logHistory = [{
     { messagetype: "text", side: false, time: "17:25", contenet: "hey" },
     { messagetype: "text", side: false, time: "17:25", contenet: "12*7?" },
     { messagetype: "text", side: true, time: "17:25", contenet: "84" },]
-}];
+}]};
 
 export default logHistory;

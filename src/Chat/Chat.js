@@ -11,8 +11,8 @@ function Chat(props) {
     return (
         <div className='chat_main'>
             <div className="chat_body">
-                <SideBar loginDetails={props.loginDetails} setBackgroundShow={setBackgroundShow} />
-                {backgroundShow ? <Messages username={backgroundShow} refresh={refresh} setRefresh={setRefresh} /> : <Background />}
+                <SideBar loginDetails={props.loginDetails} setBackgroundShow={setBackgroundShow} refresh={refresh} setRefresh={setRefresh}/>
+                {backgroundShow ? <Messages loginDetails={props.loginDetails} username={backgroundShow} refresh={refresh} setRefresh={setRefresh} ownerUsername={props.loginDetails.username}/> : <Background />}
             </div>
         </div>
     );

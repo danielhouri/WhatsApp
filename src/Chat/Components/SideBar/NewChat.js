@@ -1,43 +1,38 @@
 import React, { useRef, useState } from 'react'
 import { Button, Modal } from 'react-bootstrap';
 import ErrorMessage from '../../../ErrorMessage/ErrorMessage';
-import { addNewContact, getNicknameByUsername } from '../../Tools';
-import ChatLog from '../../Components/ChatLog'
+import { addNewContact, getNicknameByUsername, getUsernameChat } from '../../Tools';
+import logHistory from '../ChatLog';
 
 function NewChat(props) {
+
     const textBox = useRef(null);
     const [show, setShow] = useState(false);
     const [messageErr, setMessageErr] = useState('');
-    const handleMessage= () =>{
+
+    const handleMessage = () => {
         let state = ' is not register';
-        let searchSelf =false;
-        if(textBox.current.value == props.username){
+        let searchSelf = false;
+        if (textBox.current.value == props.username) {
             state = ' it\'s your own username';
             searchSelf = true;
         }
-        else if(!searchSelf && getUsernameChat(textBox.current.value)!=''){
+        else if (!searchSelf && getUsernameChat(textBox.current.value, props.username) != '') {
             state = ' already started a chat with you';
         }
         let temp = 'username: ' + textBox.current.value + state;
         setMessageErr(temp);
     }
-    const handleClose = () => setShow(false);
-    function getUsernameChat(username) {
-        let result = '';
-        ChatLog.forEach(element => {
-            if (element.username == username) {
-                result = element.data.username;
-            }
-        })
-            return result;
-    };
 
+    const handleClose = () => setShow(false);
     const handleOpen = () => setShow(true);
+
     const handleAddClose = () => {
         let txt = textBox.current.value;
-        if (getNicknameByUsername(txt) != "" && txt && getUsernameChat(txt)===''&& txt != props.username) {
-            addNewContact(txt);
+        if (getNicknameByUsername(txt) != "" && txt && getUsernameChat(txt, props.username) == '' && txt != props.username) {
+            addNewContact(txt, props.username);
             props.handleClose();
+            props.setSearchQuery(logHistory[props.username]);
         }
         else {
             props.handleClose();
@@ -45,6 +40,7 @@ function NewChat(props) {
             handleOpen()
         }
     }
+
     return (
         <div>
             <Modal show={props.show} onHide={props.handleClose}>
@@ -67,4 +63,4 @@ function NewChat(props) {
     )
 }
 
-export default NewChat
+export default NewChat;

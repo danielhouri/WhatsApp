@@ -9,11 +9,11 @@ import NewChat from './NewChat';
 import userDefualt from '../../../avatar/user.png'
 
 function SideBar(props) {
-    const [searchQuery, setSearchQuery] = useState(logHistory);
+    const [searchQuery, setSearchQuery] = useState(logHistory[props.loginDetails.username]);
     const [newChat, setNewChat] = useState(false);
 
     const doSearch = function (q) {
-        setSearchQuery(logHistory.filter((index) => getNicknameByUsername(index.username).toLowerCase().includes(q.toLowerCase())));
+        setSearchQuery(logHistory[props.loginDetails.username].filter((index) => getNicknameByUsername(index.username).toLowerCase().includes(q.toLowerCase())));
     }
     const handleOnShow = () => {
         setNewChat(true);
@@ -32,8 +32,8 @@ function SideBar(props) {
                 </Button>
             </div>
             <Search doSearch={doSearch} />
-            <SideBarChatResults chatList={searchQuery} setBackgroundShow={props.setBackgroundShow} />
-            <NewChat username={props.loginDetails.username} show={newChat} handleClose={handleOnClose} page={"new chat"} />
+            <SideBarChatResults ownerUsername={props.loginDetails.username} chatList={searchQuery} setBackgroundShow={props.setBackgroundShow} />
+            <NewChat username={props.loginDetails.username} show={newChat} handleClose={handleOnClose} page={"New Chat"} setSearchQuery={setSearchQuery}/>
         </div>
     )
 }

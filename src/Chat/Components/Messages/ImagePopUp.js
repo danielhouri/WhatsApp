@@ -9,7 +9,7 @@ function ImagePopUp(props) {
         const d = new Date();
         let time = d.getHours() + ":" + d.getMinutes();
         let temp = URL.createObjectURL(imageoSrc);
-        addNewMessage(props.username, 'image', true, time, temp);
+        addNewMessage(props.username, 'image', true, time, temp, props.ownerUsername);
         props.setRefresh(props.refresh + 1);
     }
     const handleUpload = (e) => {

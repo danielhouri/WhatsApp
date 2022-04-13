@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { addNewMessage } from '../../Tools';
 
-const useRecorder = (username, refresh, setRefresh) => {
+const useRecorder = (username, refresh, setRefresh, ownerUsername) => {
     const [audioURL, setAudioURL] = useState("");
     const [isRecording, setIsRecording] = useState(false);
     const [recorder, setRecorder] = useState(null);
@@ -24,7 +24,7 @@ const useRecorder = (username, refresh, setRefresh) => {
             let temp = URL.createObjectURL(e.data);
             const d = new Date();
             let time = d.getHours() + ":" + d.getMinutes();
-            addNewMessage(username, 'voice', true, time, temp);
+            addNewMessage(username, 'voice', true, time, temp, ownerUsername);
             setAudioURL(temp);
             setRefresh(refresh+1);
         };
