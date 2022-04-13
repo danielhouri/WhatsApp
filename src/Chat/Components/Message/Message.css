@@ -37,3 +37,7 @@
 .messages_body_message > video{
     max-width: 100%;
 }
+
+.messages_body_message > audio{
+    max-width: 100%;
+}
