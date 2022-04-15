@@ -41,3 +41,7 @@
 .messages_body_message > audio{
     max-width: 100%;
 }
+
+.message_text{
+    overflow-wrap: break-word;
+}
