@@ -5,7 +5,7 @@ function Message(props) {
 
     return (
         <p className={props.side ? 'messages_body_message message_receiver' : 'messages_body_message'}>
-            <div className='message_text'>{props.message_content}</div>
+            {props.message_content}
             <span className="sidebarchat_time noselect"> {props.message_time} </span>
         </p>
     )

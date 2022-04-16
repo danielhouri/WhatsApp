@@ -6,6 +6,7 @@
     border-radius: 10px;
     background-color: white;
     max-width:50%;
+    overflow-wrap: break-word;
 }
 
 .messages_body .message_receiver{
@@ -40,8 +41,4 @@
 
 .messages_body_message > audio{
     max-width: 100%;
-}
-
-.message_text{
-    overflow-wrap: break-word;
 }
