@@ -13,7 +13,7 @@ The Webclient contains 3 main section:
 - Chat - The main part of the Web client, this section contains the following components: SideBar and Message (where the messages are shown). This Message's components support the following type of content: text, voice, image, and video.
 
 
-### 'User Registred'
+## User Registred
 
 | Username  | Password |
 | ------------- | ------------- |
