@@ -13,11 +13,13 @@ function Messages(props) {
   const chatBox = useRef(null);
 
   const handleSendMessage = () => {
-    const d = new Date();
-    let time = d.getHours() + ":" + d.getMinutes();
-    addNewMessage(props.username, 'text', true, time, chatBox.current.value, props.loginDetails.username);
-    chatBox.current.value = '';
-    props.setRefresh(props.refresh + 1);
+    if (chatBox.current.value != "") {
+      const d = new Date();
+      let time = d.getHours() + ":" + d.getMinutes();
+      addNewMessage(props.username, 'text', true, time, chatBox.current.value, props.loginDetails.username);
+      chatBox.current.value = '';
+      props.setRefresh(props.refresh + 1);
+    }
   };
 
   const handleEnterMessage = (e) => {
