@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import ErrorMessage from '../../../ErrorMessage/ErrorMessage';
 import { addNewContact, getNicknameByUsername, getUsernameChat } from '../../Tools';
