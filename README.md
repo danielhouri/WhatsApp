@@ -32,6 +32,7 @@ If it's already installed, enter in the terminal and type "npm start".
 
 Open [http://localhost:3000](http://localhost:3000), and enjoy.
 
-### Submitting:
+### Submitting
+
 - Daniel Houri: 314712563
 - Dor Huri: 209409218
