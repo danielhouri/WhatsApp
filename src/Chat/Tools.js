@@ -18,16 +18,16 @@ function getUsernameChat(username, ownerUsername) {
     let db = ChatLog[ownerUsername];
 
     if (db != null) {
-        db.map((element,key) => {
+        db.map((element, key) => {
             if (element.username == username) {
                 result = element.data.username;
             }
-        })    
+        })
     }
     return result;
 };
 
-function getImageByUsername (username) {
+function getImageByUsername(username) {
     let result = "";
 
     UserList.forEach(element => {
@@ -38,7 +38,7 @@ function getImageByUsername (username) {
     return result;
 };
 
-function getNicknameByUsername (username) {
+function getNicknameByUsername(username) {
     let result = "";
 
     UserList.forEach(element => {
@@ -51,17 +51,17 @@ function getNicknameByUsername (username) {
 
 function addNewContact(username, ownerUsername) {
     let db = ChatLog[ownerUsername];
-    if(db != null) {
-        db.push({username: username, data: [{ messagetype: "", side: true, time: "", contenet: "" }]});
+    if (db != null) {
+        db.push({ username: username, data: [{ messagetype: "", side: true, time: "", contenet: "" }] });
     }
     else {
-        ChatLog[ownerUsername] = [{username: username, data: [{ messagetype: "", side: true, time: "", contenet: "" }]}];
+        ChatLog[ownerUsername] = [{ username: username, data: [{ messagetype: "", side: true, time: "", contenet: "" }] }];
     }
 }
 
 function addNewMessage(username, messagetype, side, time, contenet, ownerUsername) {
     let x = getMessageByUsername(username, ownerUsername);
-    x.push({ messagetype: messagetype, side: side, time: time, contenet: contenet});
+    x.push({ messagetype: messagetype, side: side, time: time, contenet: contenet });
 }
 
-export {getImageByUsername, getNicknameByUsername, getMessageByUsername, addNewContact, addNewMessage, getUsernameChat};
+export { getImageByUsername, getNicknameByUsername, getMessageByUsername, addNewContact, addNewMessage, getUsernameChat };

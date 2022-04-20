@@ -10,7 +10,7 @@ function ErrorMessage(props) {
                 </Modal.Header>
                 <Modal.Body>{props.message}</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary"  onClick={props.handleClose}>
+                    <Button variant="secondary" onClick={props.handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>

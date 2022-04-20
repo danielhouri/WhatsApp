@@ -13,9 +13,9 @@ function App() {
       <header className="App-header">
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<SignIn setLoginDetails={setLoginDetails}/>}></Route>
-            <Route path='/signup' element={<SignUn setLoginDetails={setLoginDetails}/>}></Route>
-            <Route path='/chat' element={<Chat loginDetails={loginDetails}/>}></Route>
+            <Route path='/' element={<SignIn setLoginDetails={setLoginDetails} />}></Route>
+            <Route path='/signup' element={<SignUn setLoginDetails={setLoginDetails} />}></Route>
+            <Route path='/chat' element={<Chat loginDetails={loginDetails} />}></Route>
           </Routes>
         </BrowserRouter>
       </header>

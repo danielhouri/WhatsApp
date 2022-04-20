@@ -48,7 +48,7 @@ function SignUp(props) {
             handleMessage("The password must contain letters and numbers!");
             return (1);
         }
-        else if(getNicknameByUsername(username.current.value) != "") {
+        else if (getNicknameByUsername(username.current.value) != "") {
             handleMessage("The username is already exist, try another");
             return (1);
         }
