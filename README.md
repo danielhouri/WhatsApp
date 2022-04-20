@@ -22,7 +22,7 @@ The Webclient contains 3 main section:
 
 
 ### `Run the project`
-To run the project you need to enter in the terminal. You have to install the following before to run:
+To run the project you need to open the terminal and to install the following before running:
 * node JS
 * npm 
 * react-router-dom
