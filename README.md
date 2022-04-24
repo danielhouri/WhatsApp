@@ -12,6 +12,7 @@ The Webclient contains 3 main section:
 - Signup - The registration page where the user needs to insert a user name and a password that contains digits and letters both.
 - Chat - The main part of the Web client, this section contains the following components: SideBar and Message (where the messages are shown). This Message's components support the following type of content: text, voice, image, and video.
 
+If the chat page's is refreshed, the page is displayed as a blank content. If a new connection is made, the added data will not be saved.
 
 ## User Registred
 
