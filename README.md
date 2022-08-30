@@ -32,8 +32,3 @@ To run the project you need to open the terminal and to install the following be
 If it's already installed, enter in the terminal and type "npm start".
 
 Open [http://localhost:3000](http://localhost:3000), and enjoy.
-
-## Submitting
-
-- Daniel Houri: 314712563
-- Dor Huri: 209409218
